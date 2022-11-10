@@ -1,0 +1,35 @@
+
+.container {
+  @apply w-full max-w-[1310px] px-[15px] mx-auto ;
+}
+
+.logoBox {
+  @apply mt-6 ;
+  a {
+    @apply inline-block no-underline ;
+  }
+}
+
+.content {
+  @apply absolute top-0 left-2/4 translate-x-[-50%] translate-y-[25%] max-w-[759px] px-[15px] w-full ;
+  a {
+    @apply block text-end font-bold underline ;
+  }
+}
+
+.title {
+  @apply font-medium text-2xl text-center text-black mb-28;
+}
+
+.form {
+  @apply w-full max-w-[350px] flex items-center justify-center flex-col mx-[auto] mb-10 ;
+  p {
+    @apply mt-0 mb-[56px] font-bold text-[40px] text-black ;
+  }
+  input {
+    @apply w-full rounded-[3px] mb-[24px] py-3 px-[14px] bg-zinc-100 ;
+  }
+  button {
+    @apply w-full text-[14px] p-[11px] bg-black rounded-[3px] text-white font-bold ;
+  }
+}

@@ -1,0 +1,29 @@
+.errorSide {
+  @apply py-11;
+}
+
+.container {
+  @apply max-w-[1310px] w-full mx-auto px-6;
+}
+
+.box {
+  @apply max-w-[607px] w-full mx-auto text-center;
+  .errorImg {
+    @apply mx-auto mb-12;
+  }
+  h2 {
+    @apply text-[#474747] mt-0 mb-5 font-normal text-2xl;
+  }
+  p {
+    @apply text-[#474747] mt-0 mb-10 font-light text-base;
+    span {
+      @apply block;
+    }
+  }
+  a {
+    @apply text-[#474747] flex items-center justify-center font-normal text-base no-underline;
+    img {
+      @apply ml-4;
+    }
+  }
+}

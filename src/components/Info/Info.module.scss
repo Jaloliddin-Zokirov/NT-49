@@ -1,0 +1,120 @@
+.info {
+  @apply py-14;
+}
+
+.container {
+  @apply max-w-[1310px] mx-[auto] px-[25px] w-full;
+}
+
+.box {
+  @apply w-full flex items-start justify-between;
+}
+
+.left {
+  @apply max-w-[35%] w-full;
+}
+
+.top {
+  @apply max-w-[328px] mb-[50px] w-full;
+  h2 {
+    @apply mt-0 mb-[36px] text-[24px] text-[#474747] font-normal ;
+  }
+  p {
+    @apply mt-0 mb-[25px] text-[16px] text-[#474747] font-light;
+  }
+  span {
+    @apply w-full max-w-[109px] flex items-center font-normal text-[12px] text-[#474747] cursor-pointer;
+    button {
+      @apply ml-4;
+    }
+  }
+}
+
+.bottom {
+  @apply w-full max-w-[143px] flex items-center justify-between;
+  img {
+    @apply block;
+  }
+}
+
+.right {
+  @apply max-w-[65%] w-full;
+  h2 {
+    @apply mt-0 mb-[58px] text-[24px] text-[#474747] font-normal;
+  }
+}
+
+.list {
+  a {
+    @apply block no-underline;
+  }
+}
+
+.info {
+  @apply my-0 text-[24px] text-[#2d2d2d] font-normal;
+}
+
+.item {
+  @apply mb-[50px] pb-[16px] border-b-[1px] cursor-pointer;
+}
+
+.itemTop {
+  @apply flex items-center justify-between mb-5;
+  time,
+  span {
+    @apply block text-[12px] text-[#777] font-normal;
+  }
+}
+
+.itemBottom {
+  @apply max-w-[544px] w-full;
+  h3 {
+    @apply mt-0 mb-[20px] text-[19px] text-[#474747] font-normal;
+  }
+  p {
+    @apply mt-0 mb-[20px] text-[16px] text-[#474747] font-normal;
+  }
+  span {
+    @apply flex items-center text-[12px] text-[#777] font-normal;
+    img {
+      @apply mr-3;
+    }
+  }
+}
+
+.arrowBox {
+  @apply flex items-center mt-[9px] justify-end;
+  button {
+    @apply py-[10px] px-[13px] rounded-[3px] bg-[#f4f4f4] border-[1px] border-transparent;
+    &:active {
+      @apply border-[#474747] bg-white;
+    }
+  }
+  div {
+    @apply w-full max-w-[114px] flex items-center justify-between mx-6;
+    span {
+      @apply block font-normal text-[16px] text-[#474747] cursor-pointer;
+      &:active {
+        @apply text-[#FFBA9D] text-base;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .box {
+    @apply flex-col;
+  }
+  .left {
+    @apply w-full order-1;
+    .top {
+      @apply mb-0;
+    }
+    .bottom {
+      @apply hidden;
+    }
+  }
+  .right {
+    @apply mb-[120px] w-full;
+  }
+}

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  @apply box-border scroll-smooth;
+}
+
+html {
+  @apply h-full scroll-smooth;
+}
+
+body,
+#root {
+  @apply flex flex-col h-full m-0 overflow-x-hidden;
+  font-family: "Roboto Mono", monospace;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  @apply max-w-full h-auto align-middle object-cover;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./fonts/RobotoMono-Regular.woff2") format("woff2"),
+    url("./fonts/RobotoMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./fonts/RobotoMono-Light.woff2") format("woff2"),
+    url("./fonts/RobotoMono-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./fonts/RobotoMono-Medium.woff2") format("woff2"),
+    url("./fonts/RobotoMono-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./fonts/RobotoMono-Bold.woff2") format("woff2"),
+    url("./fonts/RobotoMono-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

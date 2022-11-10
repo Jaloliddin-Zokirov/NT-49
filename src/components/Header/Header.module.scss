@@ -1,0 +1,96 @@
+.header {
+  @apply py-7;
+}
+
+.container {
+  @apply max-w-[1310px] mx-[auto] px-[25px] w-full;
+}
+
+.box {
+  @apply flex items-center justify-between w-full;
+}
+
+.left {
+  @apply w-[70%] flex items-center justify-between;
+  a {
+    @apply inline-block no-underline;
+  }
+}
+
+.checkBox {
+  @apply absolute top-[-4px] left-[-4px] w-0 h-0;
+}
+
+.hamburger {
+  @apply hidden w-[32px] h-[32px] cursor-pointer;
+
+  div {
+    @apply gap-[4px] relative flex flex-col items-center justify-center w-full h-full;
+    .line {
+      @apply transition-all block rounded-[5px] w-[80%] h-[5px] bg-black;
+    }
+  }
+}
+
+.checkBox:checked ~ .hamburger > div {
+  .line:nth-child(1) {
+    @apply absolute  rotate-45;
+  }
+  .line:nth-child(2) {
+    @apply h-0 bg-transparent;
+  }
+  .line:nth-child(3) {
+    @apply rotate-[-45deg] absolute ;
+  }
+}
+
+.listBox {
+  @apply max-w-[441px] w-full;
+  transition: all 0.4s ease;
+}
+
+.list {
+  @apply w-full flex items-center justify-between m-0 p-0 list-none;
+  div {
+    a {
+      @apply text-[#9A9A9A] inline-block font-normal text-base no-underline;
+    }
+  }
+}
+
+.search {
+  @apply max-w-[256px] ml-[20px] relative flex w-full;
+  input {
+    @apply w-full py-[11px] px-[14px] bg-zinc-100 rounded-[3px] text-[12px] text-[#474747] font-normal;
+  }
+  button {
+    @apply p-[12px] rounded-[3px] bg-[#ffba9d] border-0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .box {
+    @apply flex-col;
+  }
+  .left {
+    @apply mb-[30px] w-full;
+  }
+  .hamburger {
+    @apply block;
+  }
+  .listBox {
+    @apply absolute top-[-1100px] right-0 bottom-[1100px] left-0 z-10 bg-white;
+  }
+  .list {
+    @apply absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-[65%] flex-col z-20;
+    div {
+      @apply mb-10;
+    }
+  }
+  .search {
+    @apply max-w-full m-0;
+  }
+  .checkBox:checked ~ .listBox {
+    @apply top-[110px] bottom-0;
+  }
+}

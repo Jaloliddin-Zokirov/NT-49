@@ -1,0 +1,105 @@
+.posts {
+  @apply py-14;
+}
+
+.container {
+  @apply max-w-[1050px] mx-[auto] px-[25px] w-full;
+}
+
+.box {
+  @apply flex items-start w-full;
+}
+
+.left {
+  @apply w-full max-w-[15%] flex flex-col;
+  span:nth-child(1) {
+    @apply mb-12;
+  }
+  span {
+    @apply font-light text-[14px] text-black;
+    img {
+      @apply mb-2;
+    }
+  }
+}
+
+.right {
+  @apply w-full max-w-[85%] ml-auto;
+}
+
+.top {
+  @apply mb-20;
+  h2 {
+    @apply mt-0 mb-[25px] text-[24px] text-[#474747] font-normal;
+  }
+  div {
+    @apply mb-[45px] flex items-center;
+    time {
+      @apply block mr-[8px] pr-[7px] border-r-[1px] border-[#dfdfdf] text-[12px] text-[#777] font-normal;
+    }
+    span {
+      @apply flex items-center text-[12px] text-[#777] font-normal;
+      img {
+        @apply mr-3;
+      }
+    }
+  }
+  .postImage {
+    @apply h-[420px] rounded-[7px] mb-12;
+  }
+  .content {
+    @apply mt-0 mb-[32px]  text-[16px] text-[#474747] font-normal;
+  }
+  .describtion {
+    @apply flex flex-col my-0 pl-[22px] border-[#d4d4d4] border-l-[2px] text-[16px] text-[#474747] font-normal;
+    span:nth-child(1) {
+      @apply mb-10;
+    }
+  }
+}
+
+.desc {
+  @apply block mb-[24px] text-[12px] text-[#777] font-normal;
+}
+
+.bottom {
+  h2 {
+    @apply mt-0 mb-[40px] font-medium text-[24px] text-black;
+  }
+  .item {
+    @apply mb-[50px] pb-[16px] border-b-[1px] cursor-pointer;
+  }
+
+  .itemTop {
+    @apply flex items-center justify-between mb-5;
+    time,
+    span {
+      @apply block text-[12px] text-[#777] font-normal;
+    }
+  }
+
+  .itemBottom {
+    @apply max-w-[544px] w-full;
+    h3 {
+      @apply mt-0 mb-[20px] text-[19px] text-[#474747] font-normal;
+    }
+    p {
+      @apply mt-0 mb-[20px] text-[16px] text-[#474747] font-normal;
+    }
+    span {
+      @apply flex items-center text-[12px] text-[#777] font-normal;
+      img {
+        @apply mr-3;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .left {
+    @apply hidden;
+  }
+  .right {
+    @apply max-w-full;
+  }
+}

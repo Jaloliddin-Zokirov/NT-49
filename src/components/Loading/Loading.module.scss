@@ -1,0 +1,6 @@
+.LoadingBox {
+  @apply fixed top-0 right-0 bottom-0 left-0 z-40 bg-white;
+  img {
+    @apply fixed top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 w-[256px] h-[256px] z-50;
+  }
+}
