@@ -5,6 +5,8 @@ import footerOpacity from "../image/footer-opacity.svg";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const goToTop = () =>
+    document.getElementById("root").scrollTo({ top: 0, behavior: "smooth" });
   return (
     <footer className={style.footer}>
       <div className={style.curtain}></div>
@@ -18,7 +20,7 @@ const Footer = () => {
               height={800}
               alt="footer img"
             />
-            <Link to={"/"}>
+            <Link to={"/"} onClick={goToTop}>
               <img src={logo} width={182} height={70} alt="footer logo img" />
             </Link>
           </div>

@@ -9,7 +9,6 @@ import { axiosApi } from "../../Api/Api";
 import dayjs from "dayjs";
 import Loading from "../Loading/Loading";
 import Error from "../Error/Error";
-import { useRef } from "react";
 
 const Posts = ({ categoryId, categoryName }) => {
   const { id } = useParams();
@@ -44,13 +43,11 @@ const Posts = ({ categoryId, categoryName }) => {
       });
   }, [dispatch, category, error, categoryId]);
 
-  const topRef = useRef(null);
-
   const goToTop = () =>
     document.getElementById("root").scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <section className={style.posts} ref={topRef}>
+    <section className={style.posts}>
       <div className={style.container}>
         {loading && <Loading isOpen={loading} />}
         {error && <Error isOpen={error.state} />}
