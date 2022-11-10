@@ -106,7 +106,7 @@
     @apply flex-col;
   }
   .left {
-    @apply w-full order-1;
+    @apply max-w-full order-1;
     .top {
       @apply mb-0;
     }
@@ -115,6 +115,6 @@
     }
   }
   .right {
-    @apply mb-[120px] w-full;
+    @apply mb-[120px] max-w-full;
   }
 }
